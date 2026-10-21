@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Art Frisør – Drop-in frisør og barber</title>
+<meta name="description" content="Art Frisør – kun drop-in. Bare kom innom for klipp og skjeggstell, ingen timebestilling nødvendig.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="logo">Art Frisør</span>
+    <span class="status-pill" id="statusPill"><span class="dot"></span><span id="statusText">Sjekker…</span></span>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <span class="est">Frisør &amp; Barber</span>
+    <h1>Art <span>Frisør</span></h1>
+    <p>Skarpe klipp og velstelt skjegg. Ingen timebestilling – bare kom innom.</p>
+    <div class="dropin-badge">✂️ Kun drop-in</div>
+    <div class="hero-actions">
+      <!-- TODO: bytt adresse i lenken under (bruk + mellom ordene) -->
+      <a href="https://www.google.com/maps/search/?api=1&query=Gateadresse+1%2C+0000+Sted" target="_blank" rel="noopener" class="btn btn-gold">📍 Finn veien</a>
+      <!-- TODO: bytt telefonnummer -->
+      <a href="tel:+4700000000" class="btn btn-outline">📞 Ring oss</a>
+    </div>
+  </div>
+</header>
+<div class="pole"></div>
+
+<div class="wrap">
+
+  <!-- ============ OM OSS ============ -->
+  <section id="om">
+    <div class="section-head">
+      <span class="eyebrow">Om oss</span>
+      <h2>Kom som du er</h2>
+    </div>
+    <div class="about-card">
+      <strong>Hos Art Frisør trenger du ikke bestille time.</strong>
+      Du kommer innom når det passer deg, så tar vi deg i den rekkefølgen du kom. Vi tar oss tid til å gjøre en ordentlig jobb, enten du vil ha et klassisk klipp, en ny fade eller et velstelt skjegg.
+    </div>
+  </section>
+
+  <!-- ============ PRISER ============ -->
+  <!-- TODO: endre tjenester og priser under. Kopier en <div class="price-row"> for å legge til flere. -->
+  <section id="priser">
+    <div class="section-head">
+      <span class="eyebrow">Priser</span>
+      <h2>Tjenester</h2>
+      <p>Alle priser er veiledende. Betaling med kort eller kontant.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-row">
+        <div class="price-name">Herreklipp<span class="price-desc">Maskin og saks, inkl. vask</span></div>
+        <div class="price-dots"></div>
+        <div class="price-amount">kr 000,-</div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">Skjeggtrim<span class="price-desc">Forming og kantlinjer</span></div>
+        <div class="price-dots"></div>
+        <div class="price-amount">kr 000,-</div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">Klipp + skjegg<span class="price-desc">Komplett pakke</span></div>
+        <div class="price-dots"></div>
+        <div class="price-amount">kr 000,-</div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">Barneklipp<span class="price-desc">Opp til 12 år</span></div>
+        <div class="price-dots"></div>
+        <div class="price-amount">kr 000,-</div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">Maskinklipp</div>
+        <div class="price-dots"></div>
+        <div class="price-amount">kr 000,-</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ÅPNINGSTIDER ============ -->
+  <!-- TODO: endre tidene her OG i scriptet nederst på siden (hours = {...}) -->
+  <section id="tider">
+    <div class="section-head">
+      <span class="eyebrow">Åpningstider</span>
+      <h2>Når kan du komme?</h2>
+      <p>Bare kom innom i åpningstiden – ingen avtale nødvendig.</p>
+    </div>
+    <div class="hours-card" id="hoursCard">
+      <div class="hours-row" data-day="1"><span>Mandag</span><span>10:00 – 18:00</span></div>
+      <div class="hours-row" data-day="2"><span>Tirsdag</span><span>10:00 – 18:00</span></div>
+      <div class="hours-row" data-day="3"><span>Onsdag</span><span>10:00 – 18:00</span></div>
+      <div class="hours-row" data-day="4"><span>Torsdag</span><span>10:00 – 19:00</span></div>
+      <div class="hours-row" data-day="5"><span>Fredag</span><span>10:00 – 18:00</span></div>
+      <div class="hours-row" data-day="6"><span>Lørdag</span><span>10:00 – 16:00</span></div>
+      <div class="hours-row" data-day="0"><span>Søndag</span><span>Stengt</span></div>
+    </div>
+  </section>
+
+  <!-- ============ JOBB ============ -->
+  <section id="jobb">
+    <div class="section-head">
+      <span class="eyebrow">Jobb</span>
+      <h2>Vil du jobbe hos oss?</h2>
+    </div>
+    <div class="job-card">
+      <h3>Ser du etter jobb som frisør eller barber?</h3>
+      <p>Vi er alltid interessert i å høre fra dyktige folk. Send oss en kort presentasjon, gjerne med eksempler på arbeidet ditt, eller ring oss for en prat.</p>
+      <div class="job-actions">
+        <!-- TODO: bytt e-postadresse -->
+        <a href="mailto:post@artfrisor.no?subject=Jobbhenvendelse" class="btn btn-gold">✉️ Send e-post</a>
+        <!-- TODO: bytt telefonnummer -->
+        <a href="tel:+4700000000" class="btn btn-outline">📞 Ring oss</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section id="kontakt">
+    <div class="section-head">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Finn oss</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="icon">📍</span>
+        <div>
+          <div class="label">Adresse</div>
+          <!-- TODO: bytt adresse -->
+          <div class="value">Gateadresse 1, 0000 Sted</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="icon">📞</span>
+        <div>
+          <div class="label">Telefon</div>
+          <!-- TODO: bytt telefonnummer (både tekst og tel:-lenke) -->
+          <div class="value"><a href="tel:+4700000000">000 00 000</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="icon">✉️</span>
+        <div>
+          <div class="label">E-post</div>
+          <!-- TODO: bytt e-postadresse -->
+          <div class="value"><a href="mailto:post@artfrisor.no">post@artfrisor.no</a></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=Gateadresse+1%2C+0000+Sted" target="_blank" rel="noopener" class="btn btn-gold" style="max-width:none;">📍 Åpne i Google Maps</a>
+  </section>
+
+  <footer>
+    © 2026 Art Frisør · Kun drop-in<br>
+    Gateadresse 1, 0000 Sted · 000 00 000
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  // Åpningstider: 0=søndag ... 6=lørdag. [åpner, stenger] eller null = stengt.
+  // TODO: hold disse i samsvar med tidene som står i HTML-en over.
+  const hours = {
+    0: null,        // søndag
+    1: [10, 18],    // mandag
+    2: [10, 18],
+    3: [10, 18],
+    4: [10, 19],
+    5: [10, 18],
+    6: [10, 16]     // lørdag
+  };
+
+  const now = new Date();
+  const day = now.getDay();
+  const t = now.getHours() + now.getMinutes() / 60;
+  const h = hours[day];
+  const pill = document.getElementById('statusPill');
+  const text = document.getElementById('statusText');
+
+  if (h && t >= h[0] && t < h[1]) {
+    pill.classList.add('open');
+    text.textContent = 'Åpent nå';
+  } else {
+    pill.classList.add('closed');
+    text.textContent = 'Stengt nå';
+  }
+
+  // Marker dagens rad i åpningstidene
+  const todayRow = document.querySelector('.hours-row[data-day="' + day + '"]');
+  if (todayRow) todayRow.classList.add('today');
+})();
+</script>
+</body>
+</html>
